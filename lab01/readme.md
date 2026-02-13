@@ -120,8 +120,6 @@
 
 ### Задание 4. Составление HTTP-запросов (`curl`)
 
-`User-Agent` в примерах указан как `Ivan Ivanov`.
-
 #### 4.1 GET-запрос с `User-Agent`
 
 ```bash
