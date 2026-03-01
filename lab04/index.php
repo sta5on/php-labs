@@ -2,6 +2,15 @@
 
 declare(strict_types=1);
 
+/**
+ * @var array<int, array{
+ *     id:int,
+ *     date:string,
+ *     amount:float,
+ *     description:string,
+ *     merchant:string
+ * }> $transactions
+ */
 $transactions = [
     [
         "id" => 1,
@@ -19,6 +28,12 @@ $transactions = [
     ],
 ];
 
+/**
+ * Вычисляет общую сумму всех транзакций
+ *
+ * @param array<int, array{id:int,date:string,amount:float,description:string,merchant:string}> $transactions
+ * @return float
+ */
 function calculateTotalAmount(array $transactions): float
 {
     $totalAmount = 0.00;
@@ -29,6 +44,12 @@ function calculateTotalAmount(array $transactions): float
     return $totalAmount;
 }
 
+/**
+ * Ищет первую транзакцию по совпадению описания
+ *
+ * @param string $descriptionPart Текст для поиска в поле description
+ * @return array{id:int,date:string,amount:float,description:string,merchant:string}|null
+ */
 function findTransactionByDescription(string $descriptionPart): ?array
 {
     global $transactions;
@@ -41,6 +62,12 @@ function findTransactionByDescription(string $descriptionPart): ?array
     return null;
 }
 
+/**
+ * Ищет первую транзакцию по идентификатору через foreach
+ *
+ * @param int $id Айди транзакции
+ * @return array{id:int,date:string,amount:float,description:string,merchant:string}|null
+ */
 function findTransactionById(int $id): ?array
 {
     global $transactions;
@@ -53,6 +80,12 @@ function findTransactionById(int $id): ?array
     return null;
 }
 
+/**
+ * Ищет транзакцию по идентификатору через array_filter
+ *
+ * @param int $id Id транзакции
+ * @return array<int, array{id:int,date:string,amount:float,description:string,merchant:string}>|null
+ */
 function findTransactionByIdV2(int $id): ?array
 {
     global $transactions;
@@ -69,11 +102,23 @@ function findTransactionByIdV2(int $id): ?array
     return $filtered;
 }
 
+/**
+ * Возвращает количество дней между датой транзакции и сегодняшним днем
+ *
+ * @param string $date Дата в формате YYYY-MM-DD
+ * @return int
+ */
 function daysSinceTransaction(string $date): int
 {
     return (int)((strtotime('today') - strtotime($date)) / 86400);
 }
 
+/**
+ * Возвращает следующий свободный идентификатор транзакции
+ *
+ * @param array<int, array{id:int,date:string,amount:float,description:string,merchant:string}> $transactions
+ * @return int
+ */
 function getNextTransId(array $transactions): int
 {
     if ($transactions === []) {
@@ -83,6 +128,16 @@ function getNextTransId(array $transactions): int
     return max($ids) + 1;
 }
 
+/**
+ * Добавляет новую транзакцию в глобальный массив $transactions
+ *
+ * @param int $id Уникальный идентификатор транзакции
+ * @param string $date Дата транзакции в формате YYYY-MM-DD
+ * @param float $amount Сумма транзакции
+ * @param string $description Описание транзакции
+ * @param string $merchant Получатель платежа
+ * @return void
+ */
 function addTransaction(int $id, string $date, float $amount, string $description, string $merchant): void
 {
     global $transactions;
@@ -95,6 +150,13 @@ function addTransaction(int $id, string $date, float $amount, string $descriptio
     ];
 }
 
+/**
+ * Рендерит HTML-таблицу с транзакциями и итоговой суммой
+ *
+ * @param array<int, array{id:int,date:string,amount:float,description:string,merchant:string}> $items
+ * @param string $title Заголовок таблицы
+ * @return void
+ */
 function renderTransactionsTable(array $items, string $title): void
 {
     echo "<h2>$title</h2>";
