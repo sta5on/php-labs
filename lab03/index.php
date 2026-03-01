@@ -80,6 +80,7 @@ while ($iWhile <= 5) {
 echo "End of the while loop: a = $aWhile, b = $bWhile";
 
 echo "<hr>";
+
 echo "<h2>Do-While loop</h1>";
 $aDoWhile = 0;
 $bDoWhile = 0;
