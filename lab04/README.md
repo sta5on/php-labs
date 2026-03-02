@@ -95,16 +95,9 @@ $b = array('id' => 1, 'name' => 'Test');
 `foreach` используется для перебора элементов массива или объектов. Он удобен тем, что не требует ручного управления индексами и позволяет быстро получить текущий элемент (и при необходимости ключ).
 
 ## Список использованных источников
-- [PHP Manual: Arrays](https://www.php.net/manual/ru/language.types.array.php)
-- [PHP Manual: foreach](https://www.php.net/manual/ru/control-structures.foreach.php)
-- [PHP Manual: usort](https://www.php.net/manual/ru/function.usort.php)
-- [PHP Manual: array_filter](https://www.php.net/manual/ru/function.array-filter.php)
-- [PHP Manual: scandir](https://www.php.net/manual/ru/function.scandir.php)
-- [PHP Manual: Type declarations](https://www.php.net/manual/ru/language.types.declarations.php)
-- [Metanit: Руководство по PHP](https://metanit.com/php/tutorial/)
-- [Habr: статьи по тегу PHP](https://habr.com/ru/tags/php/articles/)
-- [PHP The Right Way (русский перевод)](https://getjump.github.io/ru-php-the-right-way/)
-- Материалы задания: `task.md`, `report-requirements.md`
+- https://metanit.com/php/tutorial/
+- https://habr.com/ru/tags/php/articles/
+- https://getjump.github.io/ru-php-the-right-way/
 
 ## Дополнительные важные аспекты
 - В проекте используется `declare(strict_types=1);`, что делает проверку типов строже.
