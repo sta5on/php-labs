@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "transaction_date": "2000-10-10",
+        "amount": 400,
+        "merchant": "linella",
+        "category": "food",
+        "type": "income",
+        "description": "wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw",
+        "is_recurring": false,
+        "created_at": "2026-04-10T07:20:42+00:00"
+    },
+    {
+        "id": 2,
+        "transaction_date": "2000-12-12",
+        "amount": 100,
+        "merchant": "linella",
+        "category": "food",
+        "type": "expense",
+        "description": "wd122121d212d12dc qwd dqqw",
+        "is_recurring": true,
+        "created_at": "2026-04-10T07:21:13+00:00"
+    },
+    {
+        "id": 3,
+        "transaction_date": "2000-10-10",
+        "amount": 555,
+        "merchant": "linella",
+        "category": "food",
+        "type": "income",
+        "description": "wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw",
+        "is_recurring": true,
+        "created_at": "2026-04-10T07:30:42+00:00"
+    },
+    {
+        "id": 4,
+        "transaction_date": "2000-10-10",
+        "amount": 666,
+        "merchant": "linella",
+        "category": "food",
+        "type": "income",
+        "description": "wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw",
+        "is_recurring": false,
+        "created_at": "2026-04-10T07:30:42+00:00"
+    },
+    {
+        "id": 5,
+        "transaction_date": "2000-10-10",
+        "amount": 777,
+        "merchant": "linella",
+        "category": "food",
+        "type": "income",
+        "description": "wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw",
+        "is_recurring": false,
+        "created_at": "2026-04-10T07:30:42+00:00"
+    },
+    {
+        "id": 6,
+        "transaction_date": "2000-10-10",
+        "amount": 123,
+        "merchant": "linella",
+        "category": "food",
+        "type": "income",
+        "description": "wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw wd122121d212d12dc qwd dqqw",
+        "is_recurring": true,
+        "created_at": "2026-04-10T07:30:42+00:00"
+    },
+    {
+        "id": 7,
+        "transaction_date": "2020-03-12",
+        "amount": 1400,
+        "merchant": "rompetrol",
+        "category": "transport",
+        "type": "expense",
+        "description": "qckjowqfjkocqwjo qwdkqw[qckjowqfjkocqwjo qwdkqw[qckjowqfjkocqwjo qwdkqw[qckjowqfjkocqwjo qwdkqw[",
+        "is_recurring": false,
+        "created_at": "2026-04-10T07:46:21+00:00"
+    },
+    {
+        "id": 8,
+        "transaction_date": "1111-11-11",
+        "amount": 2,
+        "merchant": "linella",
+        "category": "transport",
+        "type": "income",
+        "description": "12qwdqdd12d d12d 12d",
+        "is_recurring": false,
+        "created_at": "2026-04-24T05:53:44+00:00"
+    }
+]

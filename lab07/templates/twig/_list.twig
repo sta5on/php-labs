@@ -1,0 +1,44 @@
+<p class="sort-links">
+    Сортировка:
+    <a href="{{ sortLinks.transaction_date }}">дата</a>,
+    <a href="{{ sortLinks.amount }}">сумма</a>,
+    <a href="{{ sortLinks.category }}">категория</a>,
+    <a href="{{ sortLinks.created_at }}">добавлено</a>
+</p>
+
+{% if transactions is empty %}
+    <p>Транзакции пока не добавлены.</p>
+{% else %}
+    <div class="table-wrap">
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th><a href="{{ sortLinks.transaction_date }}">Дата</a></th>
+                <th><a href="{{ sortLinks.amount }}">Сумма</a></th>
+                <th>Контрагент</th>
+                <th><a href="{{ sortLinks.category }}">Категория</a></th>
+                <th>Тип</th>
+                <th>Описание</th>
+                <th>Recurring</th>
+                <th><a href="{{ sortLinks.created_at }}">Создано</a></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction.id }}</td>
+                    <td>{{ transaction.transaction_date }}</td>
+                    <td>{{ transaction.amount|currency('MDL') }}</td>
+                    <td>{{ transaction.merchant }}</td>
+                    <td>{{ transaction.category_label }}</td>
+                    <td>{{ transaction.type_label }}</td>
+                    <td>{{ transaction.description }}</td>
+                    <td>{{ transaction.is_recurring_label }}</td>
+                    <td>{{ transaction.created_at }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endif %}

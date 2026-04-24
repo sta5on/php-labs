@@ -1,0 +1,7 @@
+{
+    "name": "sta5on/php-lab07",
+    "description": "Laboratory work 07: native PHP templates and Twig",
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}
